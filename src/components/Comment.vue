@@ -4,11 +4,10 @@
       <p class="card-text">{{ comment.body }}</p>
     </div>
     <div class="card-footer">
-      <a href="" class="comment-author">
+      <a href="#" class="comment-author">
         <img :src="comment.author.image" class="comment-author-img" />
       </a>
       <router-link
-        class="comment-author"
         :to="{ name: 'profile', params: { username: comment.author.username } }"
       >
         {{ comment.author.username }}
@@ -38,7 +37,9 @@ export default {
       }
       return false;
     },
-    ...mapGetters(["currentUser"])
+    currentUser() {
+      return this.$store.state.user.currentUser;
+    }
   },
   methods: {
     destroy(slug, commentId) {

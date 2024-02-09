@@ -9,10 +9,10 @@
               Need an account?
             </router-link>
           </p>
-          <ul v-if="errors" class="error-messages">
+          <ul v-if="errors.length" class="error-messages">
             <li v-for="(v, k) in errors" :key="k">{{ k }} {{ v | error }}</li>
           </ul>
-          <form @submit.prevent="onSubmit(email, password)">
+          <form @submit.prevent="onSubmit">
             <fieldset class="form-group">
               <input
                 class="form-control form-control-lg"
@@ -29,7 +29,10 @@
                 placeholder="Password"
               />
             </fieldset>
-            <button class="btn btn-lg btn-primary pull-xs-right">
+            <button
+              class="btn btn-lg btn-primary pull-xs-right"
+              @click="onSubmit"
+            >
               Sign in
             </button>
           </form>

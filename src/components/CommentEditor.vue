@@ -48,6 +48,9 @@ export default {
         .catch(({ response }) => {
           this.errors = response.data.errors;
         });
+    },
+    onPostComment() {
+      console.log("Post Comment button clicked!");
     }
   }
 };
