@@ -1170,6 +1170,7 @@ export default {
   right: 0;
   overflow-y: scroll;
 }
+
 .margin-check {
   border-bottom: 1px solid #d2d7da;
   line-height: 3.5rem;
