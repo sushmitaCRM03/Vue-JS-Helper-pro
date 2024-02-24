@@ -8,9 +8,12 @@
       <span v-text="tag" />
     </li>
   </ul>
+  <div></div>
 </template>
 
+
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "TagList",
   props: {

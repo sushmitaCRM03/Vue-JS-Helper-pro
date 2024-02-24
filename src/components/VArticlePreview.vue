@@ -15,11 +15,14 @@ import RwvArticleMeta from "./ArticleMeta";
 import TagList from "./TagList";
 
 export default {
-  name: "RwvArticlePreview",
+  name: "RwvArtinb nbnbclePreview",
   components: {
     RwvArticleMeta,
     TagList
   },
+
+
+
   props: {
     article: { type: Object, required: true }
   },
