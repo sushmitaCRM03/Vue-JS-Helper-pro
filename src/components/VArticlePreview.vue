@@ -5,7 +5,6 @@
       <h1 v-text="article.title" />
       <p v-text="article.description" />
       <span>Read more...</span>
-      <TagList :tags="article.tagList" />
     </router-link>
   </div>
 </template>
@@ -15,7 +14,7 @@ import RwvArticleMeta from "./ArticleMeta";
 import TagList from "./TagList";
 
 export default {
-  name: "RwvArticlePreview",
+  name: "RwvArticldsvdfsdfePreview",
   components: {
     RwvArticleMeta,
     TagList
