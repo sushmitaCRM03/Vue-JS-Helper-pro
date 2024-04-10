@@ -1,13 +1,13 @@
+name: Reusable workflow example
+
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - ready_for_review
-      - synchronize
-    branches:
-      - dev
-  issue_comment:
+  workflow_call:
+    secrets:
+      OPENAI_KEY:
+        required: true
+      GITHUB_TOKEN:
+        required: true
+
 jobs:
   pr_agent_job:
     runs-on: ubuntu-latest
@@ -23,3 +23,4 @@ jobs:
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
