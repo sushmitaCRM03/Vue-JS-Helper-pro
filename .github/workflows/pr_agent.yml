@@ -5,8 +5,6 @@ on:
     secrets:
       OPENAI_KEY:
         required: true
-      GITHUB_TOKEN:
-        required: true
 
 jobs:
   pr_agent_job:
