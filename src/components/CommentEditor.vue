@@ -40,14 +40,20 @@ export default {
   methods: {
     onSubmit(slug, comment) {
       this.$store
+      
         .dispatch(COMMENT_CREATE, { slug, comment })
         .then(() => {
           this.comment = null;
           this.errors = {};
         })
+
+
         .catch(({ response }) => {
           this.errors = response.data.errors;
         });
+    },
+    onPostComment() {
+      console.log("Post Comment button clicked!");
     }
   }
 };

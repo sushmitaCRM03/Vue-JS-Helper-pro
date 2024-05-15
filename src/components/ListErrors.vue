@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "RwvListErorrs",
+  name: "RwvListErdorrs",
   props: {
     errors: { type: Object, required: true }
   }
